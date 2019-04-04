@@ -8,6 +8,9 @@ setup(name='tap-density',
       author='sinaenvoy.com',
       classifiers=['Programming Language :: Python :: 3 :: Only'],
       py_modules=['tap_density'],
+      install_requires=[
+        'tap-framework==0.0.5'
+      ],
       entry_points='''
           [console_scripts]
           tap-density=tap_density:main
