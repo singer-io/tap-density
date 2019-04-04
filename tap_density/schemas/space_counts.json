@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "count": {
+      "type": ["null", "integer"]
+    },
+    "space_id": {
+      "type": ["null", "string"]
+    },
+    "interval": {
+      "type": ["null", "object"],
+      "properties": {
+        "start": {
+          "type": ["null", "string"],
+          "format": "date-time"
+        },
+        "end": {
+          "type": ["null", "string"],
+          "format": "date-time"
+        },
+        "analytics": {
+          "type": ["null","object"],
+          "properties": {
+            "min": {
+              "type": ["null", "integer"]
+            },
+            "max": {
+              "type": ["null", "integer"]
+            },
+            "events": {
+              "type": ["null", "integer"]
+            },
+            "entrances": {
+              "type": ["null", "integer"]
+            },
+            "exits": {
+              "type": ["null", "integer"]
+            },
+            "utilization": {
+              "type": ["null", "integer"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

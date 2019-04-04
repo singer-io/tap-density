@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["null", "string"]
+    },
+    "name": {
+      "type": ["null", "string"]
+    },
+    "description": {
+      "type": ["null", "string"]
+    },
+    "space_type": {
+      "type": ["null", "string"]
+    },
+    "function": {
+      "type": ["null", "string"]
+    },
+    "time_zone": {
+      "type": ["null", "string"]
+    },
+    "daily_reset": {
+      "type": ["null", "string"]
+    },
+    "current_count": {
+      "type": ["null", "number"]
+    },
+    "capacity": {
+      "type": ["null", "number"]
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "parent_id": {
+      "type": ["null", "string"]
+    },
+    "doorways": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "string"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          },
+          "sensor_placement": {
+            "type": ["null","integer"]
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": ["null", "array"],
+      "items": {
+
+      }
+    },
+    "address_line1": {
+      "type": ["null", "string"]
+    },
+    "address_line2": {
+      "type": ["null", "string"]
+    },
+    "city": {
+      "type": ["null", "string"]
+    },
+    "state_province": {
+      "type": ["null", "string"]
+    },
+    "postal_code": {
+      "type": ["null", "string"]
+    },
+    "country_code": {
+      "type": ["null", "string"]
+    },
+    "latitude": {
+      "type": ["null", "string"]
+    },
+    "longitude": {
+      "type": ["null", "string"]
+    },
+    "time_segments": {
+      "type": ["null", "array"],
+      "items":{
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "string"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          },
+          "start": {
+            "type":["null","string"],
+            "format": "date-time"
+          },
+          "end": {
+            "type":["null","string"],
+            "format": "date-time"
+          },
+          "days": {
+            "type":["null","array"],
+            "items": {
+
+            }
+          }
+        }
+      }
+    },
+    "time_segment_groups": {
+      "type": ["null", "array"],
+      "items":{
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "string"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "space_mappings": {
+      "type": ["null", "array"],
+      "items": {
+
+      }
+    },
+    "ancestry": {
+      "type": ["null", "array"],
+      "items":{
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "string"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    }
+  }
+}

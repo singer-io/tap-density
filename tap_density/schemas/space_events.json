@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["null", "string"]
+    },
+    "doorway_id": {
+      "type": ["null", "string"]
+    },
+    "sensor_serial_number": {
+      "type": ["null", "string"]
+    },
+    "space_id": {
+      "type": ["null", "string"]
+    },
+    "timestamp": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "direction": {
+      "type": ["null", "number"]
+    }
+  }
+}

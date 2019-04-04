@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["null", "string"]
+    },
+    "doorway_id": {
+      "type": ["null", "string"]
+    },
+    "doorway_name": {
+      "type": ["null", "string"]
+    },
+    "space_name": {
+      "type": ["null", "string"]
+    },
+    "sensor_placement": {
+      "type": ["null", "integer"]
+    },
+    "space_id": {
+      "type": ["null", "string"]
+    },
+    "tags": {
+      "type": ["null", "array"],
+      "items": {
+        
+      }
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    }
+  }
+}

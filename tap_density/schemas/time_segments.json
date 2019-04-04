@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": ["null", "string"]
+    },
+    "name": {
+      "type": ["null", "string"]
+    },
+    "start": {
+      "type": ["null", "string"],
+      "format": "date-time"
+
+    },
+    "end": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "spaces": {
+      "type": ["null", "array"],
+      "items":{
+        "type": ["null", "object"],
+        "properties": {
+          "space_id": {
+            "type": ["null", "string"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "days": {
+      "type": ["null", "array"],
+      "items": {
+
+      }
+    }
+  }
+}
