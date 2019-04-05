@@ -1,5 +1,6 @@
 import singer
 import singer.transform
+import hashlib
 
 from singer import utils
 from dateutil.parser import parse
@@ -98,6 +99,8 @@ class BaseAPIStream(BaseStream):
         LOGGER.info("Querying {} starting at {}".format(table, bookmark_date))
         urls, spaces, mult_endpoints = self.get_url(bookmark_date, current_date)
 
+        key_hash = hashlib.sha256()
+
         for i, url in enumerate(urls):
 
             done = False
@@ -117,6 +120,11 @@ class BaseAPIStream(BaseStream):
 
                     if self.TABLE in ('space_counts','space_events'):
                         item['space_id'] = spaces[i]
+
+                    if self.TABLE == 'space_counts':
+                        # Creates a surrogate primary key for this endpoint, since one doesn't exist at time of writing
+                        key_hash.update(((item['space_id'] + item['timestamp']).encode('utf-8')))
+                        item['id'] = key_hash.hexdigest()
 
                     if item.get('updated_at') is not None:
                         max_date = max(
@@ -155,10 +163,10 @@ class BaseAPIStream(BaseStream):
                     params['page'] = page
                     bookmark_date = max_date
 
-            if mult_endpoints and updated:
-                temp_max.append(max_date)
-                max_date = min(temp_max)
-                self.state = incorporate(
-                    self.state, table, 'bookmark_date', min(temp_max))
+        if mult_endpoints and updated:
+            temp_max.append(max_date)
+            max_date = min(temp_max)
+            self.state = incorporate(
+                self.state, table, 'bookmark_date', max_date)
 
-            save_state(self.state)
+        save_state(self.state)

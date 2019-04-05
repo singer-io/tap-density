@@ -4,8 +4,8 @@ from dateutil.parser import parse
 
 class SpacecountsStream(BaseAPIStream):
     TABLE = 'space_counts'
-    # Endpoint does not provide us with an ID
-    KEY_PROPERTIES = []
+    # Endpoint does not provide us with an ID, using the surrogate primary key I created
+    KEY_PROPERTIES = ['id']
     BOOKMARK_PROPERTIES = ['timestamp']
     SELECTED_BY_DEFAULT = True
     VALID_REPLICATION_KEYS = ['timestamp']

@@ -11,6 +11,9 @@
     "space_id": {
       "type": ["null", "string"]
     },
+    "id": {
+      "type": ["null", "string"]
+    },
     "interval": {
       "type": ["null", "object"],
       "properties": {
