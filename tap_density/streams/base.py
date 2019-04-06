@@ -161,12 +161,12 @@ class BaseAPIStream(BaseStream):
                     page += 1
                     LOGGER.info("Advancing by one page.")
                     params['page'] = page
-                    bookmark_date = max_date
 
         if mult_endpoints and updated:
             temp_max.append(max_date)
             max_date = min(temp_max)
-            self.state = incorporate(
-                self.state, table, 'bookmark_date', max_date)
+
+        self.state = incorporate(
+            self.state, table, 'bookmark_date', max_date)
 
         save_state(self.state)
