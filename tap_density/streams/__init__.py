@@ -7,11 +7,11 @@ from .space_events import SpaceeventsStream
 from .space_counts import SpacecountsStream
 
 AVAILABLE_STREAMS = [
-    # DoorwaysStream,
-    # LinksStream,
-    # SpacesStream,
-    # TimesegmentsStream,
-    # TimesegmentgroupsStream,
-    SpaceeventsStream#,
-    #SpacecountsStream
+    DoorwaysStream,
+    LinksStream,
+    SpacesStream,
+    TimesegmentsStream,
+    TimesegmentgroupsStream,
+    SpaceeventsStream,
+    SpacecountsStream
 ]
