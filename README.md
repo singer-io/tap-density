@@ -60,4 +60,4 @@ This tap:
 
 ---
 
-Copyright &copy; 2019 Envoy Inc.
+Copyright &copy; 2019 Stitch
